@@ -46,32 +46,68 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            
+            if (numbers == null )
+            {
+                return 0;
+            }
+            if (numbers.Count () == 0)
+            {
+                return 0;
+            }
+            return numbers.Min() + numbers.Max();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            if (str1.Length < str2.Length )
+            {
+                return str1.Length;
+
+            }
+            else
+            {
+               return str2.Length;
+            }
         }
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            return numbers.Sum();
+
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if(numbers == null)
+            {
+                return 0;
+            }
+            return numbers.Where(x=> x % 2 == 0 ).Sum();
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+            return (numbers.Sum() % 2 !=0);
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            if (number <= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return number / 2;
+            }
         }
     }
 }
