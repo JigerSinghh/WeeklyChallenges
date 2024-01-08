@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mLW3fo9U6qGl0raCjazTx5UfAqYC2RiqM2UPFt7Rt3srOmX9wGuI1u+/VusDaCIGgvcgRtQ7IY7l9YhmmZIaOA==",
+  "dgSpecHash": "WqWiA0MRdy5hOeL1aaZ4f3i0hjWOJV7e69hh2e82FpZGHyJfsTjbR14BezsSpTZo5Drhs5cYFYEvEniwJm8mmw==",
   "success": true,
   "projectFilePath": "/Users/jigersingh/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/jigersingh/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.21/microsoft.aspnetcore.app.ref.6.0.21.nupkg.sha512",
+    "/Users/jigersingh/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.21/microsoft.netcore.app.host.osx-arm64.6.0.21.nupkg.sha512",
+    "/Users/jigersingh/.nuget/packages/microsoft.netcore.app.ref/6.0.21/microsoft.netcore.app.ref.6.0.21.nupkg.sha512"
+  ],
   "logs": []
 }

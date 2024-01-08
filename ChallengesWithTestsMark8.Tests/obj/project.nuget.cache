@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kA72yGhyOu0dvoLg+gB4KzMpe5QFPCj+IX98jP4iRxv/cNYRhKsJQj8miPOUuYODDdK7CyNALCVeGIzoSJf8wA==",
+  "dgSpecHash": "XmFWpAgNJJrdWXSFy7sw/I7vTgXzUbSx4SHytDC4ME2xeFYrMT9ZdemkdvzDq7LlFdfKYF0T2nIPf5z+P2KAgg==",
   "success": true,
   "projectFilePath": "/Users/jigersingh/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
   "expectedPackageFiles": [
@@ -91,7 +91,9 @@
     "/Users/jigersingh/.nuget/packages/xunit.core/2.4.2/xunit.core.2.4.2.nupkg.sha512",
     "/Users/jigersingh/.nuget/packages/xunit.extensibility.core/2.4.2/xunit.extensibility.core.2.4.2.nupkg.sha512",
     "/Users/jigersingh/.nuget/packages/xunit.extensibility.execution/2.4.2/xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "/Users/jigersingh/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    "/Users/jigersingh/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512",
+    "/Users/jigersingh/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.21/microsoft.aspnetcore.app.ref.6.0.21.nupkg.sha512",
+    "/Users/jigersingh/.nuget/packages/microsoft.netcore.app.ref/6.0.21/microsoft.netcore.app.ref.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }
