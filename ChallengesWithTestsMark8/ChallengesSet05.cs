@@ -7,20 +7,16 @@ namespace ChallengesWithTestsMark8
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            startNumber++;
-                while (startNumber % n !=0)
-            {
-                startNumber++;
-            }
-            return startNumber;
+            return ((startNumber / n) + 1) * n;
         }
+
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            for (var i = 0; i < businesses.Length; i++)
+            for (var biz = 0; biz < businesses.Length; biz++)
             {
-                if (businesses[i].TotalRevenue == 0)
+                if (businesses[biz].TotalRevenue == 0)
                 {
-                    businesses[i].Name = "CLOSED";
+                    businesses[biz].Name = "CLOSED";
                 }
             }
         }
@@ -32,9 +28,10 @@ namespace ChallengesWithTestsMark8
                 return false;
             }
 
-            for (var i = 1; i < numbers.Length; i++)
+
+            for (var num = 1; num < numbers.Length; num++)
             {
-                if (numbers[i] < numbers[i - 1])
+                if (numbers[num] < numbers[num - 1])
                 {
                     return false;
                 }
@@ -48,13 +45,14 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
+
             int sum = 0;
 
-            for (int i = 1; i < numbers.Length; i++)
+            for (int sumnum = 1; sumnum < numbers.Length; sumnum++)
             {
-                if (numbers[i - 1] % 2 == 0)
+                if (numbers[sumnum - 1] % 2 == 0)
                 {
-                    sum += numbers[i];
+                    sum += numbers[sumnum];
                 }
             }
             return sum;
@@ -75,19 +73,17 @@ namespace ChallengesWithTestsMark8
                 {
                     sentence += word.Trim() + " ";
                 }
-
             }
+
             if (sentence.Length == 0)
             {
                 return "";
             }
-
             sentence = sentence.Trim();
             sentence += ".";
             return sentence;
+
         }
-
-
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
@@ -95,23 +91,23 @@ namespace ChallengesWithTestsMark8
             {
                 return new double[0];
             }
-            List<double> everyFourth = new List<double>();
 
-            for (var i = 3; i < elements.Count; i += 4)
+            List<double> evfouthEl = new List<double>();
+
+            for (var evFourth = 3; evFourth < elements.Count; evFourth += 4)
             {
-                everyFourth.Add(elements[i]);
+                evfouthEl.Add(elements[evFourth]);
             }
-
-            return everyFourth.ToArray();
+            return evfouthEl.ToArray();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
-            for (int i = 0; i < nums.Length; i++)
+            for (int num = 0; num < nums.Length; num++)
             {
-                for (int j = i + 1; j < nums.Length; j++)
+                for (int numb = num + 1; numb < nums.Length; numb++)
                 {
-                    if (nums[i] + nums[j] == targetNumber)
+                    if (nums[num] + nums[numb] == targetNumber)
                     {
                         return true;
                     }

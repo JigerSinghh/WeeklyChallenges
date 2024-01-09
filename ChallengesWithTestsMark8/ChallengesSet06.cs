@@ -9,16 +9,22 @@ namespace ChallengesWithTestsMark8
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
         {
             bool containsWord = false;
+
             if (string.Equals(words, null) || words.Contains(null))
             {
                 return false;
             }
+
+
             if (ignoreCase == true)
             {
                 word = word.ToLower();
-                List<string> lc = words.Select(x => x.ToLower()).ToList();
-                containsWord = lc.Contains(word);
+
+                List<string> lowcase = words.Select(lc => lc.ToLower()).ToList();
+
+                containsWord = lowcase.Contains(word);
             }
+
             if (ignoreCase == false)
             {
                 containsWord = words.Contains(word);
@@ -28,76 +34,86 @@ namespace ChallengesWithTestsMark8
 
         public bool IsPrimeNumber(int num)
         {
-            if (num == 2 || num == 3 || num == 5 || num == 7)
+            var itsPrime = false;
+
+            if (num >= 0)
             {
-                return true;
+                if (num % 2 != 0 && num % 3 != 0)
+                {
+                    itsPrime = true;
+                }
             }
-            else if (num == 1 || num < 0)
+
+            if ((num == 2) || (num == 3))
             {
-                return false;
+                itsPrime = true;
             }
-            else if (num % 2 != 0 && num % 3 != 0)
+
+            if (num == 1)
             {
-                return true;
+                itsPrime = false;
             }
-            else
-            {
-                return false;
-            }
+
+            return itsPrime;
         }
 
         public int IndexOfLastUniqueLetter(string str)
         {
             int index = -1;
-            bool uIndex;
+
+            bool uindex;
+
             for (int i = 0; i < str.Length; i++)
             {
-                uIndex = true;
+                uindex = true;
+
                 for (int j = 0; j < str.Length; j++)
                 {
                     if (str[i] == str[j] && i != j)
                     {
-                        uIndex = false;
+                        uindex = false;
                     }
                 }
 
-                if (uIndex == true)
+                if (uindex == true)
                 {
                     index = i;
                 }
             }
-
             return index;
         }
 
+
         public int MaxConsecutiveCount(int[] numbers)
         {
-            int maxCount = 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                int currentCount = 1;
+            int count = 0;
 
-                for (int j = i + 1; j < numbers.Length; j++)
+            for (var i = 0; i < numbers.Length; i++)
+            {
+                int currCount = 1;
+
+                for (var j = i + 1; j < numbers.Length; j++)
                 {
                     if (numbers[i] != numbers[j])
                     {
                         break;
                     }
 
-                    currentCount++;
+                    currCount++;
                 }
 
-                if (currentCount > maxCount)
+                if (currCount > count)
                 {
-                    maxCount = currentCount;
+                    count = currCount;
                 }
             }
-            return maxCount;
+
+            return count;
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
-            var nthElement = new List<double>();
+            List<double> nthElement = new List<double>();
 
             if (elements == null || n <= 0 || n > elements.Count)
             {
@@ -110,7 +126,6 @@ namespace ChallengesWithTestsMark8
             }
 
             return nthElement.ToArray();
-
         }
     }
 }

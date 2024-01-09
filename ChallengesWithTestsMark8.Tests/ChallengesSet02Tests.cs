@@ -84,7 +84,7 @@ namespace ChallengesWithTestsMark8.Tests
             ChallengesSet02 challenger = new ChallengesSet02();
 
             // Act
-            bool actual = ChallengesSet02.IsNumberEven(number);
+            bool actual = challenger.IsNumberEven(number);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -110,7 +110,7 @@ namespace ChallengesWithTestsMark8.Tests
             ChallengesSet02 challenger = new ChallengesSet02();
 
             // Act
-            bool actual = ChallengesSet02.IsNumberOdd(number);
+            bool actual = challenger.IsNumberOdd(number);
 
             // Assert
             Assert.Equal(expected, actual);
